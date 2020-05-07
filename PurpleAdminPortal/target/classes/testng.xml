@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Purple Admin Tool Automation Test Suite">
+<listeners>
+		<listener class-name="com.qa.ExtentReportListener.ExtentReportListener" />
+	</listeners>
+
+	<test name="Purple Admin Tool">
+		<classes>
+			<class name="com.purpleAdmin.qa.testcases.LoginPageTestCases"></class>
+			<!-- <class name="com.purpleAdmin.qa.testcases.HomePageTestCases"></class>
+			<class name="com.purpleAdmin.qa.testcases.ValidateMenuLinksTestCases.java"></class> -->
+		</classes>
+	</test>
+</suite>
