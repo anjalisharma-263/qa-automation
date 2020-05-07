@@ -56,6 +56,7 @@ public class HomePageTestCases extends TestBase {
 		homePage.clickOnHamburgerMenuBtn();
 		homePage.clickOnWayfindingLeftMenu();
 		homePage.clickOnLeftModuleLink("Data Management", "Parking Lots");
+		System.out.print("Parking Lots on Homepage verification complete");
 		// destinationPage = homePage.clickOnDestinationLink();
 	}
 
