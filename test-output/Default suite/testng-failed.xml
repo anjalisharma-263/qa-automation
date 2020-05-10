@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="com.purpleAdmin.qa.testcases.LoginPageTestCases">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="loginPageTitleTest"/>
+        </methods>
+      </class> <!-- com.purpleAdmin.qa.testcases.LoginPageTestCases -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

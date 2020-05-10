@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Failed suite [Purple Admin Tool Automation Test Suite]">
+  <listeners>
+    <listener class-name="com.qa.ExtentReportListener.ExtentReportListener"/>
+  </listeners>
+  <test thread-count="5" name="Purple Admin Tool(failed)">
+    <classes>
+      <class name="com.purpleAdmin.qa.testcases.LoginPageTestCases">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="loginPageTitleTest"/>
+        </methods>
+      </class> <!-- com.purpleAdmin.qa.testcases.LoginPageTestCases -->
+    </classes>
+  </test> <!-- Purple Admin Tool(failed) -->
+</suite> <!-- Failed suite [Purple Admin Tool Automation Test Suite] -->
