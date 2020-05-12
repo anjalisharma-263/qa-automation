@@ -132,7 +132,7 @@
               <version>3.0.0-M1</version>   
 				<configuration>
                  
-						<suiteXmlFile>src/main/resources/testSuite/regression.xml</suiteXmlFile>
+						<suiteXmlFile>src/main/resources/testng.xml</suiteXmlFile>
 						
 				
 					</configuration>
