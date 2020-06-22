@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="Purple Admin Tool Automation Test Suite">
+<suite name="Web Tool Automation Test Suite">
 <listeners>
 		<listener class-name="com.qa.ExtentReportListener.ExtentReportListener" />
 	</listeners>
 
-	<test name="Purple Admin Tool">
+	<test name="Web App">
 		<classes>
-			<class name="com.purpleAdmin.qa.testcases.LoginPageTestCases"></class>
-			<!-- <class name="com.purpleAdmin.qa.testcases.HomePageTestCases"></class>
-			<class name="com.purpleAdmin.qa.testcases.ValidateMenuLinksTestCases.java"></class> -->
+			<class name="com.purpleAdmin.qa.testcases.WebHamburgerPageTestCases"></class>
+			<class name="com.purpleAdmin.qa.testcases.WebNavigationDirectionsTestCases"></class>
 		</classes>
 	</test>
 </suite>

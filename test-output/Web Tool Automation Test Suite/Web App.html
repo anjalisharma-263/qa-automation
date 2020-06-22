@@ -1,0 +1,144 @@
+<html>
+<head>
+<title>TestNG:  Web App</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Web App</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>13/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Jun 17 18:19:28 IST 2020</td>
+</tr>
+<tr><td>Total time:</td><td>604 seconds (604147 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.purpleAdmin.qa.testcases.WebHamburgerPageTestCases.validateAppOverviewBtn()'><b>validateAppOverviewBtn</b><br>Test class: com.purpleAdmin.qa.testcases.WebHamburgerPageTestCases<br>Parameters: {SNO=5, CAMPUS_NAME=AMC, TEST_CASE_NAME=validateAppOverviewBtn, URL=https://amc.yourdirectroute.com/, STARTING_POINT=, DESTINATION_POINT=}</td>
+<td></td>
+<td>20</td>
+<td>com.purpleAdmin.qa.testcases.WebHamburgerPageTestCases@36d64342</td></tr>
+<tr>
+<td title='com.purpleAdmin.qa.testcases.WebHamburgerPageTestCases.validateClearRouteBtn()'><b>validateClearRouteBtn</b><br>Test class: com.purpleAdmin.qa.testcases.WebHamburgerPageTestCases<br>Parameters: {SNO=4, CAMPUS_NAME=AMC, TEST_CASE_NAME=validateClearRouteBtn, URL=https://amc.yourdirectroute.com/, STARTING_POINT=Emergency Department, DESTINATION_POINT=The Massry Family Children's Emergency Center}</td>
+<td></td>
+<td>34</td>
+<td>com.purpleAdmin.qa.testcases.WebHamburgerPageTestCases@36d64342</td></tr>
+<tr>
+<td title='com.purpleAdmin.qa.testcases.WebHamburgerPageTestCases.validateEULABtn()'><b>validateEULABtn</b><br>Test class: com.purpleAdmin.qa.testcases.WebHamburgerPageTestCases<br>Parameters: {SNO=7, CAMPUS_NAME=AMC, TEST_CASE_NAME=validateEULABtn, URL=https://amc.yourdirectroute.com/, STARTING_POINT=, DESTINATION_POINT=}</td>
+<td></td>
+<td>20</td>
+<td>com.purpleAdmin.qa.testcases.WebHamburgerPageTestCases@36d64342</td></tr>
+<tr>
+<td title='com.purpleAdmin.qa.testcases.WebNavigationDirectionsTestCases.validateKeyLegends()'><b>validateKeyLegends</b><br>Test class: com.purpleAdmin.qa.testcases.WebNavigationDirectionsTestCases<br>Parameters: {SNO=13, CAMPUS_NAME=AMC, TEST_CASE_NAME=validateKeyLegends, URL=https://amc.yourdirectroute.com/, STARTING_POINT=Emergency Department, DESTINATION_POINT=The Massry Family Children's Emergency Center}</td>
+<td></td>
+<td>29</td>
+<td>com.purpleAdmin.qa.testcases.WebNavigationDirectionsTestCases@17f6480</td></tr>
+<tr>
+<td title='com.purpleAdmin.qa.testcases.WebNavigationDirectionsTestCases.validateMapRecenter()'><b>validateMapRecenter</b><br>Test class: com.purpleAdmin.qa.testcases.WebNavigationDirectionsTestCases<br>Parameters: {SNO=10, CAMPUS_NAME=AMC, TEST_CASE_NAME=validateMapRecenter, URL=https://amc.yourdirectroute.com/, STARTING_POINT=Emergency Department, DESTINATION_POINT=The Massry Family Children's Emergency Center}</td>
+<td></td>
+<td>38</td>
+<td>com.purpleAdmin.qa.testcases.WebNavigationDirectionsTestCases@17f6480</td></tr>
+<tr>
+<td title='com.purpleAdmin.qa.testcases.WebNavigationDirectionsTestCases.validateMapRotateLeft()'><b>validateMapRotateLeft</b><br>Test class: com.purpleAdmin.qa.testcases.WebNavigationDirectionsTestCases<br>Parameters: {SNO=11, CAMPUS_NAME=AMC, TEST_CASE_NAME=validateMapRotateLeft, URL=https://amc.yourdirectroute.com/, STARTING_POINT=Emergency Department, DESTINATION_POINT=The Massry Family Children's Emergency Center}</td>
+<td></td>
+<td>37</td>
+<td>com.purpleAdmin.qa.testcases.WebNavigationDirectionsTestCases@17f6480</td></tr>
+<tr>
+<td title='com.purpleAdmin.qa.testcases.WebNavigationDirectionsTestCases.validateMapRotateRight()'><b>validateMapRotateRight</b><br>Test class: com.purpleAdmin.qa.testcases.WebNavigationDirectionsTestCases<br>Parameters: {SNO=12, CAMPUS_NAME=AMC, TEST_CASE_NAME=validateMapRotateRight, URL=https://amc.yourdirectroute.com/, STARTING_POINT=Emergency Department, DESTINATION_POINT=The Massry Family Children's Emergency Center}</td>
+<td></td>
+<td>36</td>
+<td>com.purpleAdmin.qa.testcases.WebNavigationDirectionsTestCases@17f6480</td></tr>
+<tr>
+<td title='com.purpleAdmin.qa.testcases.WebNavigationDirectionsTestCases.validateMapZoomIn()'><b>validateMapZoomIn</b><br>Test class: com.purpleAdmin.qa.testcases.WebNavigationDirectionsTestCases<br>Parameters: {SNO=8, CAMPUS_NAME=AMC, TEST_CASE_NAME=validateMapZoomIn, URL=https://amc.yourdirectroute.com/, STARTING_POINT=Emergency Department, DESTINATION_POINT=The Massry Family Children's Emergency Center}</td>
+<td></td>
+<td>144</td>
+<td>com.purpleAdmin.qa.testcases.WebNavigationDirectionsTestCases@17f6480</td></tr>
+<tr>
+<td title='com.purpleAdmin.qa.testcases.WebNavigationDirectionsTestCases.validateMapZoomOut()'><b>validateMapZoomOut</b><br>Test class: com.purpleAdmin.qa.testcases.WebNavigationDirectionsTestCases<br>Parameters: {SNO=9, CAMPUS_NAME=AMC, TEST_CASE_NAME=validateMapZoomOut, URL=https://amc.yourdirectroute.com/, STARTING_POINT=Emergency Department, DESTINATION_POINT=The Massry Family Children's Emergency Center}</td>
+<td></td>
+<td>34</td>
+<td>com.purpleAdmin.qa.testcases.WebNavigationDirectionsTestCases@17f6480</td></tr>
+<tr>
+<td title='com.purpleAdmin.qa.testcases.WebNavigationDirectionsTestCases.validateOffisteOnsiteDirections()'><b>validateOffisteOnsiteDirections</b><br>Test class: com.purpleAdmin.qa.testcases.WebNavigationDirectionsTestCases<br>Parameters: {SNO=3, CAMPUS_NAME=AMC, TEST_CASE_NAME=validateOffisteOnsiteDirections, URL=https://amc.yourdirectroute.com/, STARTING_POINT=Emergency Department, DESTINATION_POINT=The cafe17 }</td>
+<td></td>
+<td>57</td>
+<td>com.purpleAdmin.qa.testcases.WebNavigationDirectionsTestCases@17f6480</td></tr>
+<tr>
+<td title='com.purpleAdmin.qa.testcases.WebNavigationDirectionsTestCases.validateOnisteOffisteDirections()'><b>validateOnisteOffisteDirections</b><br>Test class: com.purpleAdmin.qa.testcases.WebNavigationDirectionsTestCases<br>Parameters: {SNO=2, CAMPUS_NAME=AMC, TEST_CASE_NAME=validateOnisteOffisteDirections, URL=https://amc.yourdirectroute.com/, STARTING_POINT=Emergency Department, DESTINATION_POINT=The cafe17 }</td>
+<td></td>
+<td>47</td>
+<td>com.purpleAdmin.qa.testcases.WebNavigationDirectionsTestCases@17f6480</td></tr>
+<tr>
+<td title='com.purpleAdmin.qa.testcases.WebNavigationDirectionsTestCases.validateOnsiteDirections()'><b>validateOnsiteDirections</b><br>Test class: com.purpleAdmin.qa.testcases.WebNavigationDirectionsTestCases<br>Parameters: {SNO=1, CAMPUS_NAME=AMC, TEST_CASE_NAME=validateOnsiteDirections, URL=https://amc.yourdirectroute.com/, STARTING_POINT=Emergency Department, DESTINATION_POINT=The Massry Family Children's Emergency Center}</td>
+<td></td>
+<td>41</td>
+<td>com.purpleAdmin.qa.testcases.WebNavigationDirectionsTestCases@17f6480</td></tr>
+<tr>
+<td title='com.purpleAdmin.qa.testcases.WebHamburgerPageTestCases.validatePrivacyPolicyBtn()'><b>validatePrivacyPolicyBtn</b><br>Test class: com.purpleAdmin.qa.testcases.WebHamburgerPageTestCases<br>Parameters: {SNO=6, CAMPUS_NAME=AMC, TEST_CASE_NAME=validatePrivacyPolicyBtn, URL=https://amc.yourdirectroute.com/, STARTING_POINT=, DESTINATION_POINT=}</td>
+<td></td>
+<td>25</td>
+<td>com.purpleAdmin.qa.testcases.WebHamburgerPageTestCases@36d64342</td></tr>
+</table><p>
+</body>
+</html>

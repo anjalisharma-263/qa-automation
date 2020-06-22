@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-
+import java.text.SimpleDateFormat;
 import org.apache.commons.io.FileUtils;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -14,9 +14,17 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 import com.purpleAdmin.qa.base.TestBase;
+//import com.relevantcodes.extentreports.ExtentTest;
+
 
 public class TestUtil extends TestBase {
 
@@ -24,6 +32,7 @@ public class TestUtil extends TestBase {
 	public static long IMPLICIT_WAIT = 20;
 	public static long start = System.currentTimeMillis();
 	public static long finish = System.currentTimeMillis();
+	public static Boolean  blnFlag = false;
 
 	public static String TESTDATA_SHEET_PATH = "/Users/user/Downloads/PurpleAuto/PurpleAdminPortal/src/main/java/com/purpleAdmin/qa/testdata/PupleAdminModuleList.xlsx";
 
@@ -32,7 +41,8 @@ public class TestUtil extends TestBase {
 	static JavascriptExecutor js;
 
 	public static void switchToFrame() {
-		driver.switchTo().frame("wayfinding-iframe");
+		//driver.switchTo().frame("wayfinding-iframe");
+		driver.switchTo().frame("viewport");
 	}
 	/*public static void switchToFrameWithID(WebElement element){
 		driver.switchTo().frame(element);
@@ -70,10 +80,56 @@ public class TestUtil extends TestBase {
 		}
 		return data;
 	}
-	
+
 	public static String validatePageTitle(){
 		String pageTitle= driver.findElement(By.xpath("//h4[@class='purpleHeading']")).getText();
 		return pageTitle;
 	}
+	public static Boolean waitForElementPresence(WebElement ele, WebDriver driver){
+		WebDriverWait wait = new WebDriverWait(driver, 90);
+		blnFlag = wait.until(ExpectedConditions.visibilityOf(ele)).isDisplayed();
+		return blnFlag;
+	}
+	public static WebElement expandRootElement(WebElement element) {
+		WebElement ele = (WebElement) ((JavascriptExecutor) driver)
+				.executeScript("return arguments[0].shadowRoot",element);
+		return ele;
+	}
 
+	private void logResult(ExtentTest test, String key, String actual, String expected, String result) {
+		if (result.equalsIgnoreCase("PASS")) {
+			test.log(Status.PASS, "<font size = 3 color=\"#3ADF00\">" + key + "</font>" + " Actual: " + actual
+					+ " || Expected: " + expected);
+		}
+		else {
+			test.log(Status.FAIL, "<font size = 3 color=\"#FE2E2E\">" + key + "</font>" + " Actual: " + actual
+					+ " || Expected: " + expected);
+		}
+	}
+
+	public void verifyText(String actual, String expected, String key, ExtentTest test) {
+		try {
+			Assert.assertEquals(actual, expected);
+			logResult(test, key, actual, expected, "PASS");
+		} catch (Error e) {
+			logResult(test, key, actual, expected, "FAIL");
+
+		}
+	}
+
+	public static void scrollByVisibleElement(WebElement element){
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView();", element);
+	}
+
+	public static Boolean compareText(WebElement element, String expected){
+		String actual = element.getText();
+		System.out.println(actual);
+
+		if(expected.equals(actual)){
+			blnFlag = true;
+		}
+		return blnFlag;
+	}
 }
+
