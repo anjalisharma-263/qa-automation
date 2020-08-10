@@ -1,4 +1,4 @@
-package com.purpleAdmin.qa.testcases;
+/*package com.purpleAdmin.qa.testcases;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
@@ -49,3 +49,4 @@ public class LoginPageTestCases extends TestBase {
 	}
 
 }
+*/

@@ -1,4 +1,4 @@
-package com.purpleAdmin.qa.testcases;
+/*package com.purpleAdmin.qa.testcases;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
@@ -59,9 +59,9 @@ public class ValidateMenuLinksTestCases extends TestBase {
 		System.out.println(Menu + "---->" + SubMenu);
 
 		homePage.clickOnLeftModuleLink(Menu, SubMenu);
-		/*testUtil.switchToFrame();
+		testUtil.switchToFrame();
 	    String pageText =	homePage.validatePurpleHeadingtest();
-		System.out.println(pageText);*/
+		System.out.println(pageText);
 
 	}
 
@@ -71,3 +71,4 @@ public class ValidateMenuLinksTestCases extends TestBase {
 	}
 
 }
+*/

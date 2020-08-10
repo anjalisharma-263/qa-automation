@@ -1,4 +1,4 @@
-package com.purpleAdmin.qa.testcases;
+/*package com.purpleAdmin.qa.testcases;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
@@ -73,3 +73,4 @@ public class HomePageTestCases extends TestBase {
 	// }
 
 }
+*/
