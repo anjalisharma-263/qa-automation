@@ -6,8 +6,14 @@
 
 	<test name="Web App">
 		<classes>
-			<class name="com.purpleAdmin.qa.testcases.WebHamburgerPageTestCases"></class>
-			<class name="com.purpleAdmin.qa.testcases.WebNavigationDirectionsTestCases"></class>
+		<!--  -->class name="com.purpleAdmin.qa.testcases.WebHomePageTestCase"> -->
+			<!--  -->class name="com.purpleAdmin.qa.testcases.WebNavigationDirectionsTestCases"> -->
+			<class name="com.purpleAdmin.qa.testcases.ValidateKioskURLTestCases"></class>
+			<!--  -->class name="com.purpleAdmin.qa.testcases.WebHamburgerPageTestCases"> -->
+			<!--  -->class name="com.purpleAdmin.qa.testcases.WebFileUploadTestCase"> -->
 		</classes>
 	</test>
 </suite>
+
+
+
