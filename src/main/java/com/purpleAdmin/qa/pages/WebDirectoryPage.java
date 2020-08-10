@@ -1,5 +1,8 @@
 package com.purpleAdmin.qa.pages;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -17,13 +20,16 @@ public class WebDirectoryPage extends TestBase{
 
 	@FindBy(xpath = "(//span[@class='iconExpanderBg'])[1]")
 	WebElement expandIcon;
+	
+	@FindBy(xpath = "(//ion-row[@class ='searchGoogleRow md hydrated']//ion-col//div//a)[1]")
+	WebElement selectOffsiteLocation;
 
 	@FindBy(xpath = "(//button[@class='mapItButton'])[1]")
 	WebElement MapIt;
 
 	@FindBy(xpath = "(//button[@class='viewMap '])[1]")
 	WebElement viewOnMap;
-	
+
 	@FindBy(xpath = "(//button[@class='viewMap '])[2]")
 	WebElement viewOnMapForOffsite;
 
@@ -33,8 +39,6 @@ public class WebDirectoryPage extends TestBase{
 	@FindBy(id = "reverseDirection")
 	WebElement reverseDirection;
 
-	Boolean blnFlag = false;
-	
 	//Initializing the Page objects
 	public WebDirectoryPage(){
 		PageFactory.initElements(driver, this);
@@ -58,6 +62,14 @@ public class WebDirectoryPage extends TestBase{
 			expandIcon.click();
 		}
 	}
+	
+	public void selectOffsiteLocation(){
+		if(TestUtil.waitForElementPresence(selectOffsiteLocation, driver)){
+			selectOffsiteLocation.click();
+			/*WebElement shadowRoot1 = TestUtil.expandRootElement(selectOffsiteLocation);
+			shadowRoot1.findElement(By.cssSelector("ion-row[class=searchGoogleRow md hydrated]")).click();;*/
+		}
+	}
 
 	public void clickMapIt(){
 		if(TestUtil.waitForElementPresence(MapIt, driver)){
@@ -66,14 +78,16 @@ public class WebDirectoryPage extends TestBase{
 	}
 
 	public Boolean clickViewOnMap(){
+		Boolean blnFlag = false;
 		if(TestUtil.waitForElementPresence(viewOnMap, driver)){
 			viewOnMap.click();
 			blnFlag = true;
 		}
 		return blnFlag;
 	}
-	
+
 	public Boolean clickViewOnMapForOffiste(){
+		Boolean blnFlag = false;
 		TestUtil.scrollByVisibleElement(viewOnMapForOffsite);
 		if(TestUtil.waitForElementPresence(viewOnMapForOffsite, driver)){
 			viewOnMapForOffsite.click();
@@ -92,5 +106,55 @@ public class WebDirectoryPage extends TestBase{
 		if(TestUtil.waitForElementPresence(reverseDirection, driver)){
 			reverseDirection.click();
 		}
+	}
+
+	public Boolean isReverseIconEnabled(){
+		Boolean blnFlag = false;
+		blnFlag = reverseDirection.isEnabled();
+		if(blnFlag==false){
+			blnFlag = true;
+		}
+		return blnFlag;
+	}
+
+	public Boolean isDirectionContentClickable(){
+		Boolean blnFlag = false;
+		List<WebElement> allRows = driver.findElements(By.xpath("//ul//li//span[@class = 'directionContent ']"));
+		System.out.println(allRows);
+
+		for (WebElement element: allRows) {
+			System.out.println(element.getText());
+			blnFlag = element.isEnabled();
+			if(blnFlag){
+				element.click();          
+			}
+			else{
+				System.out.println(element +" is not clickable ");
+			}
+		}
+		return blnFlag;
+	}
+
+	public void clearStartingPointText(){
+		TestUtil.clearData(startingPoint);
+	}
+
+	public void clearDestinationPointText(){
+		TestUtil.clearData(destinationPoint);
+	}
+
+	public Boolean isGoogleSearchEnable(){
+		Boolean blnFlag = false;
+		List<WebElement> googleResultList = driver.findElements(By.xpath("//div[@class ='googlesearchAtoComplete']//div//div//ion-row"));
+		for (WebElement element: googleResultList) {
+			System.out.println(element.getText());
+		}
+		if(googleResultList.size()>=1){
+			blnFlag = true;    
+		}
+		else{
+			System.out.println("Google search is not working");
+		}
+		return blnFlag;
 	}
 }
