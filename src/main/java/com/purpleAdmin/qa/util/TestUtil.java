@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import org.apache.commons.io.FileUtils;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -12,6 +13,7 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -19,7 +21,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.purpleAdmin.qa.base.TestBase;
@@ -47,12 +48,12 @@ public class TestUtil extends TestBase {
 	/*public static void switchToFrameWithID(WebElement element){
 		driver.switchTo().frame(element);
 	}*/
-
+/*
 	public static void takeScreenshotAtEndOfTest() throws IOException {
 		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		String currentDir = System.getProperty("user.dir");
 		FileUtils.copyFile(scrFile, new File(currentDir + "/screenshots/" + System.currentTimeMillis() + ".png"));
-	}
+	}*/
 
 	public static Object[][] getTestData(String sheetName) {
 		FileInputStream file = null;
@@ -131,5 +132,23 @@ public class TestUtil extends TestBase {
 		}
 		return blnFlag;
 	}
-}
 
+	public static void switchTab(){
+		//Switching between tabs using CTRL + tab keys.
+		driver.findElement(By.cssSelector("body")).sendKeys(Keys.CONTROL +"\t");
+		//Switch to current selected tab's content.
+		driver.switchTo().defaultContent();
+	}
+
+	public static void clearData(WebElement element){
+		element.clear();
+	}
+	
+	public static String getFileDateAsSufix(){
+	Date date = new Date(); 
+    	SimpleDateFormat formatter =  new SimpleDateFormat("yyyyMMdd"); 
+   	String fileDateSuffix = formatter.format(date);
+	return fileDateSuffix;
+	}
+
+}
