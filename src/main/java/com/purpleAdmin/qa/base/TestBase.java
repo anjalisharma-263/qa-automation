@@ -13,7 +13,9 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 
@@ -124,9 +126,11 @@ public class TestBase {
 		}
 		return hashMapObject;
 	}
-	@AfterSuite
+	
+	@AfterTest
 	public void createReport() {
 		extent.flush();
 		
 	}
+	
 }

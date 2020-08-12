@@ -22,6 +22,7 @@ public class KioskBL {
 		try{
 		driver.get(dataMap.get("URL"));
 		Thread.sleep(15000);
+		//driver.navigate().refresh();
 		kp.clickBeginBtn();
 		actualTitleMainMenu = kp.getTitleMainMenu();
 		mapDisplayed = String.valueOf(kp.getMapFloor());

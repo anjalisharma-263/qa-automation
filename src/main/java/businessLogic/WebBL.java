@@ -258,12 +258,9 @@ public class WebBL {
 
 	public void acceptTermsDisplayed(HashMap<String, String> dataMap) {
 		try{
-			if(dataMap.get("CAMPUS_NAME").equals("AMC")){
-			acceptEULATerms(dataMap); //This method handles EULA popup
-			}
-			else{
-			homePage.skipTutorial(); //This method handles Skip Tutorial popup
-			}
+		   acceptEULATerms(dataMap); //This method handles EULA popup
+			//homePage.skipTutorial(); //This method handles Skip Tutorial popup
+			
 		}catch(Exception e){
 			System.out.print("EULA and Skip turorial is not configured ");
 		}
@@ -303,7 +300,7 @@ public class WebBL {
 			}
 			Thread.sleep(1000);
 			dirPage.enterDestinationPoint(dataMap.get("DESTINATION_POINT"));
-			if(dataMap.get("DESTINATION_POINT").contains("the Cafe17 ")){
+			if(dataMap.get("DESTINATION_POINT").contains("The cafe17 ")){
 				dirPage.selectOffsiteLocation();
 			}
 			else{

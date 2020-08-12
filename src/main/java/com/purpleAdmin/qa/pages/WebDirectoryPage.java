@@ -66,8 +66,6 @@ public class WebDirectoryPage extends TestBase{
 	public void selectOffsiteLocation(){
 		if(TestUtil.waitForElementPresence(selectOffsiteLocation, driver)){
 			selectOffsiteLocation.click();
-			/*WebElement shadowRoot1 = TestUtil.expandRootElement(selectOffsiteLocation);
-			shadowRoot1.findElement(By.cssSelector("ion-row[class=searchGoogleRow md hydrated]")).click();;*/
 		}
 	}
 

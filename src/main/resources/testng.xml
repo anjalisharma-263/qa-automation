@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Web Tool Automation Test Suite">
-<listeners>
+	<listeners>
 		<listener class-name="com.qa.ExtentReportListener.ExtentReportListener" />
 	</listeners>
 
 	<test name="Web App">
 		<classes>
-		<!--  -->class name="com.purpleAdmin.qa.testcases.WebHomePageTestCase"> -->
-			<!--  -->class name="com.purpleAdmin.qa.testcases.WebNavigationDirectionsTestCases"> -->
-			<class name="com.purpleAdmin.qa.testcases.ValidateKioskURLTestCases"></class>
-			<!--  -->class name="com.purpleAdmin.qa.testcases.WebHamburgerPageTestCases"> -->
-			<!--  -->class name="com.purpleAdmin.qa.testcases.WebFileUploadTestCase"> -->
+			<class name="com.purpleAdmin.qa.testcases.WebHomePageTestCase"></class>
+			<class name="com.purpleAdmin.qa.testcases.WebNavigationDirectionsTestCases"></class>
+			<class name="com.purpleAdmin.qa.testcases.WebMapPageTestCases"></class>
+			<class name="com.purpleAdmin.qa.testcases.WebHamburgerPageTestCases"></class>
+			<class name="com.purpleAdmin.qa.testcases.WebEmailPrintTestCases"></class>
+		</classes>
+	</test>
+	<test name="File Upload">
+		<classes>
+		
+			<class name="com.purpleAdmin.qa.testcases.WebFileUploadTestCase"></class>
 		</classes>
 	</test>
 </suite>
-
-
-

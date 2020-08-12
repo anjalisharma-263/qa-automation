@@ -34,7 +34,7 @@ public class WebEmailPrintTestCases extends TestBase {
 		outputMap = new HashMap<String, String>();
 	}
 
-/*	@Test(dataProvider = "getData")
+	@Test(dataProvider = "getData")
 	public void validateEmailBtn(HashMap<String, String> dataMap){
 		initialization(dataMap.get("BROWSER_NAME"));
 		extentTest = parent.createNode("Validating Email Functionality on "+ dataMap.get("BROWSER_NAME")+ " for " +dataMap.get("CAMPUS_NAME"));
@@ -42,7 +42,7 @@ public class WebEmailPrintTestCases extends TestBase {
 		outputMap = wb.performEmail(driver, dataMap);
 		wb.validateResults(extentTest, outputMap);
 	}
-*/
+
 	@Test(dataProvider = "getData")
 	public void validatePrintBtn(HashMap<String, String> dataMap){
 		initialization(dataMap.get("BROWSER_NAME"));
