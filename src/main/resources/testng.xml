@@ -6,11 +6,10 @@
 
 	<test name="Web App">
 		<classes>
-			<class name="com.purpleAdmin.qa.testcases.WebHomePageTestCase"></class>
-			<class name="com.purpleAdmin.qa.testcases.WebNavigationDirectionsTestCases"></class>
-			<class name="com.purpleAdmin.qa.testcases.WebMapPageTestCases"></class>
-			<class name="com.purpleAdmin.qa.testcases.WebHamburgerPageTestCases"></class>
-			<class name="com.purpleAdmin.qa.testcases.WebEmailPrintTestCases"></class>
+			
+			<!--  -->class name="com.purpleAdmin.qa.testcases.WebMapPageTestCases">
+		<class name="com.purpleAdmin.qa.testcases.WebNavigationDirectionsTestCases"></class>
+		
 		</classes>
 	</test>
 	<test name="File Upload">

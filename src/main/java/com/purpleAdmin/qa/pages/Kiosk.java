@@ -17,7 +17,7 @@ public class Kiosk extends TestBase {
 	WebElement MainMenu;
 	@FindBy(xpath = "//*[@id='Art']")
 	WebElement mapFloor;
-	@FindBy(xpath = "//*[@class='ag-body-container']//div[@class='ag-row ag-row-no-focus ag-row-no-animation ag-row-level-0 ag-row-even'][1]")
+	@FindBy(xpath = "(//*[@class='ag-body-container']//div[@class='ag-row ag-row-no-focus ag-row-no-animation ag-row-level-0 ag-row-even'])[1]")
 	WebElement directoryWithSplash;
 	@FindBy(xpath = "//*[@class = 'main-nav row'][1]")
 	WebElement directoryWithoutSplash;

@@ -1,40 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="39308" started-at="2020-06-19T11:00:38Z" finished-at="2020-06-19T11:01:17Z">
+  <suite name="Default suite" duration-ms="233942" started-at="2020-08-12T18:58:51Z" finished-at="2020-08-12T19:02:45Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="39308" started-at="2020-06-19T11:00:38Z" finished-at="2020-06-19T11:01:17Z">
-      <class name="com.purpleAdmin.qa.testcases.WebHamburgerPageTestCases">
-        <test-method status="PASS" signature="setExtentReport()[pri:0, instance:com.purpleAdmin.qa.testcases.WebHamburgerPageTestCases@58134517]" name="setExtentReport" is-config="true" duration-ms="509" started-at="2020-06-19T16:30:37Z" finished-at="2020-06-19T16:30:38Z">
+    <test name="Default test" duration-ms="233942" started-at="2020-08-12T18:58:51Z" finished-at="2020-08-12T19:02:45Z">
+      <class name="com.purpleAdmin.qa.testcases.WebMapPageTestCases">
+        <test-method status="PASS" signature="setExtentReport()[pri:0, instance:com.purpleAdmin.qa.testcases.WebMapPageTestCases@6fadae5d]" name="setExtentReport" is-config="true" duration-ms="646" started-at="2020-08-13T00:28:50Z" finished-at="2020-08-13T00:28:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setExtentReport -->
-        <test-method status="PASS" signature="createTest()[pri:0, instance:com.purpleAdmin.qa.testcases.WebHamburgerPageTestCases@58134517]" name="createTest" is-config="true" duration-ms="12" started-at="2020-06-19T16:30:38Z" finished-at="2020-06-19T16:30:38Z">
+        <test-method status="PASS" signature="createTest()[pri:0, instance:com.purpleAdmin.qa.testcases.WebMapPageTestCases@6fadae5d]" name="createTest" is-config="true" duration-ms="7" started-at="2020-08-13T00:28:51Z" finished-at="2020-08-13T00:28:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createTest -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.purpleAdmin.qa.testcases.WebHamburgerPageTestCases@58134517]" name="setUp" is-config="true" duration-ms="2565" started-at="2020-06-19T16:30:38Z" finished-at="2020-06-19T16:30:41Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.purpleAdmin.qa.testcases.WebMapPageTestCases@6fadae5d]" name="setUp" is-config="true" duration-ms="0" started-at="2020-08-13T00:28:52Z" finished-at="2020-08-13T00:28:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validateClearRouteBtn(java.util.HashMap)[pri:0, instance:com.purpleAdmin.qa.testcases.WebHamburgerPageTestCases@58134517]" name="validateClearRouteBtn" duration-ms="36335" started-at="2020-06-19T16:30:41Z" data-provider="getData" finished-at="2020-06-19T16:31:17Z">
+        <test-method status="PASS" signature="validateMapZoomIn(java.util.HashMap)[pri:0, instance:com.purpleAdmin.qa.testcases.WebMapPageTestCases@6fadae5d]" name="validateMapZoomIn" duration-ms="65902" started-at="2020-08-13T00:28:52Z" data-provider="getData" finished-at="2020-08-13T00:29:57Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{SNO=4, CAMPUS_NAME=AMC, TEST_CASE_NAME=validateClearRouteBtn, URL=https://amc.yourdirectroute.com/, STARTING_POINT=Emergency Department, DESTINATION_POINT=The Massry Family Children's Emergency Center}]]>
+                <![CDATA[{SNO=7, BROWSER_NAME=Chrome, EXPECTED_TITLE=translate3d(1.89699e+08px, 2.37075e+08px, 0px, EMAIL=, CAMPUS_NAME=AMC, EMAILSENTMESSAGE=, TEST_CASE_NAME=validateMapZoomIn, URL=https://ljwebappv2-stage.azurewebsites.net/#home?host=amc, STARTING_POINT=Emergency Department, DESTINATION_POINT=The Massry Family Children's Emergency Center}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateClearRouteBtn -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.purpleAdmin.qa.testcases.WebHamburgerPageTestCases@58134517]" name="tearDown" is-config="true" duration-ms="683" started-at="2020-06-19T16:31:17Z" finished-at="2020-06-19T16:31:18Z">
+        </test-method> <!-- validateMapZoomIn -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.purpleAdmin.qa.testcases.WebMapPageTestCases@6fadae5d]" name="tearDown" is-config="true" duration-ms="277" started-at="2020-08-13T00:29:57Z" finished-at="2020-08-13T00:29:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.purpleAdmin.qa.testcases.WebHamburgerPageTestCases -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.purpleAdmin.qa.testcases.WebMapPageTestCases@6fadae5d]" name="setUp" is-config="true" duration-ms="1" started-at="2020-08-13T00:29:58Z" finished-at="2020-08-13T00:29:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validateMapZoomOut(java.util.HashMap)[pri:0, instance:com.purpleAdmin.qa.testcases.WebMapPageTestCases@6fadae5d]" name="validateMapZoomOut" duration-ms="81708" started-at="2020-08-13T00:29:58Z" data-provider="getData" finished-at="2020-08-13T00:31:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{SNO=8, BROWSER_NAME=Chrome, EXPECTED_TITLE=translate3d(9.48496e+07px, 1.18538e+08px, 0px, EMAIL=, CAMPUS_NAME=AMC, EMAILSENTMESSAGE=, TEST_CASE_NAME=validateMapZoomOut, URL=https://ljwebappv2-stage.azurewebsites.net/#home?host=amc, STARTING_POINT=Emergency Department, DESTINATION_POINT=The Massry Family Children's Emergency Center}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateMapZoomOut -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.purpleAdmin.qa.testcases.WebMapPageTestCases@6fadae5d]" name="tearDown" is-config="true" duration-ms="221" started-at="2020-08-13T00:31:20Z" finished-at="2020-08-13T00:31:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.purpleAdmin.qa.testcases.WebMapPageTestCases@6fadae5d]" name="setUp" is-config="true" duration-ms="1" started-at="2020-08-13T00:31:20Z" finished-at="2020-08-13T00:31:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validateMapRotateLeft(java.util.HashMap)[pri:0, instance:com.purpleAdmin.qa.testcases.WebMapPageTestCases@6fadae5d]" name="validateMapRotateLeft" duration-ms="51684" started-at="2020-08-13T00:31:20Z" data-provider="getData" finished-at="2020-08-13T00:32:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{SNO=9, BROWSER_NAME=Chrome, EXPECTED_TITLE=rotate(1.74533e-11rad);, EMAIL=, CAMPUS_NAME=AMC, EMAILSENTMESSAGE=, TEST_CASE_NAME=validateMapRotateLeft, URL=https://ljwebappv2-stage.azurewebsites.net/#home?host=amc, STARTING_POINT=Emergency Department, DESTINATION_POINT=The Massry Family Children's Emergency Center}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateMapRotateLeft -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.purpleAdmin.qa.testcases.WebMapPageTestCases@6fadae5d]" name="tearDown" is-config="true" duration-ms="257" started-at="2020-08-13T00:32:11Z" finished-at="2020-08-13T00:32:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.purpleAdmin.qa.testcases.WebMapPageTestCases@6fadae5d]" name="setUp" is-config="true" duration-ms="0" started-at="2020-08-13T00:32:12Z" finished-at="2020-08-13T00:32:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validateMapRotateRight(java.util.HashMap)[pri:0, instance:com.purpleAdmin.qa.testcases.WebMapPageTestCases@6fadae5d]" name="validateMapRotateRight" duration-ms="32535" started-at="2020-08-13T00:32:12Z" data-provider="getData" finished-at="2020-08-13T00:32:44Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{SNO=10, BROWSER_NAME=Chrome, EXPECTED_TITLE=rotate(1.0472rad);, EMAIL=, CAMPUS_NAME=AMC, EMAILSENTMESSAGE=, TEST_CASE_NAME=validateMapRotateRight, URL=https://ljwebappv2-stage.azurewebsites.net/#home?host=amc, STARTING_POINT=Emergency Department, DESTINATION_POINT=The Massry Family Children's Emergency Center}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateMapRotateRight -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.purpleAdmin.qa.testcases.WebMapPageTestCases@6fadae5d]" name="tearDown" is-config="true" duration-ms="202" started-at="2020-08-13T00:32:44Z" finished-at="2020-08-13T00:32:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="createReport()[pri:0, instance:com.purpleAdmin.qa.testcases.WebMapPageTestCases@6fadae5d]" name="createReport" is-config="true" duration-ms="576" started-at="2020-08-13T00:32:44Z" finished-at="2020-08-13T00:32:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createReport -->
+      </class> <!-- com.purpleAdmin.qa.testcases.WebMapPageTestCases -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
